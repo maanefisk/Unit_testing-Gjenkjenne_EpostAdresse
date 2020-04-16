@@ -13,7 +13,7 @@
     <script src="lib.js"></script>
     <script>
         QUnit.test("checkEmail", function (assert) {
-            const actual = checkEmail('charlotte@getacademy.no');
+            const actual = checkEmail(' char lotte@getacad  emy.no');
             const expected = true;
             assert.equal(actual, expected);
         });
@@ -24,9 +24,9 @@
             assert.equal(actual, expected);
         });
 
-        QUnit.test("fix - 'terje'", function (assert) {
-            const actual = fixText('terje');
-            const expected = 'Terje';
+        QUnit.test("addDot", function (assert) {
+            const actual = addDot('charlotte@getacademy.no');
+            const expected = 'charlotte.@.getacademy.no';
             assert.equal(actual, expected);
         });
 
